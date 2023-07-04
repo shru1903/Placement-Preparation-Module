@@ -1,0 +1,10 @@
+Leetcode - https://leetcode.com/problems/majority-element/submissions/868944557/
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        n=set(nums)
+        n=list(n)
+        maxi=n[0]
+        for i in n:
+            if nums.count(i)>nums.count(maxi):
+                maxi=i
+        return maxi
